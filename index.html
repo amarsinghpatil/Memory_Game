@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Memory Match Game | GUVI Task 11</title>
+  <!-- Google Fonts for sleek modern typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="game-container">
+    <!-- Header / Title -->
+    <header class="game-header">
+      <h1 class="game-title">🧠 Memory Matrix</h1>
+      <p class="game-subtitle">Match all 8 pairs with the fewest moves!</p>
+    </header>
+
+    <!-- Stats Heads-Up Display (HUD) -->
+    <section class="game-hud" aria-label="Game Statistics">
+      <div class="stat-card">
+        <span class="stat-label">Moves</span>
+        <span id="moves-count" class="stat-value">0</span>
+      </div>
+
+      <div class="stat-card">
+        <span class="stat-label">Time</span>
+        <span id="timer-display" class="stat-value">00:00</span>
+      </div>
+
+      <div class="stat-card">
+        <span class="stat-label">Best</span>
+        <span id="best-score-display" class="stat-value">-</span>
+      </div>
+
+      <button id="restart-btn" class="btn btn-secondary" title="Restart Game" aria-label="Restart Game">
+        <span class="btn-icon">🔄</span> Restart
+      </button>
+    </section>
+
+    <!-- 4x4 Memory Cards Grid -->
+    <main class="grid-container">
+      <div id="game-grid" class="game-grid" role="grid" aria-label="Memory Card Grid">
+        <!-- Cards dynamically injected via JavaScript -->
+      </div>
+    </main>
+  </div>
+
+  <!-- Win Modal Dialog -->
+  <div id="win-modal" class="modal-backdrop hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-card">
+      <div class="modal-confetti">🎉</div>
+      <h2 id="modal-title" class="modal-title">Outstanding Victory!</h2>
+      <p class="modal-desc">You successfully conquered the Memory Matrix.</p>
+
+      <div class="modal-stats">
+        <div class="modal-stat-item">
+          <span class="modal-stat-label">Total Moves:</span>
+          <span id="final-moves" class="modal-stat-value">0</span>
+        </div>
+        <div class="modal-stat-item">
+          <span class="modal-stat-label">Time Elapsed:</span>
+          <span id="final-time" class="modal-stat-value">00:00</span>
+        </div>
+        <div class="modal-stat-item">
+          <span class="modal-stat-label">All-Time Best:</span>
+          <span id="final-best" class="modal-stat-value">-</span>
+        </div>
+      </div>
+
+      <div id="new-record-badge" class="new-record-badge hidden">🏆 New Personal Best!</div>
+
+      <button id="modal-play-again-btn" class="btn btn-primary">
+        🎮 Play Again
+      </button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
