@@ -6,7 +6,7 @@ An interactive, responsive 3D card matching game built with vanilla HTML5, moder
 
 ## 🎮 Live Demo & Repository
 
-- **GitHub Repository:** [https://github.com/amarsinghpatil/Memory_Game_JS](https://github.com/amarsinghpatil/Memory_Game_JS)
+- **GitHub Repository:** [https://github.com/amarsinghpatil/Memory_Game](https://github.com/amarsinghpatil/Memory_Game)
 - **Live Netlify Deployment:** *(Deploy to Netlify and add link here)*
 
 ---
@@ -55,7 +55,7 @@ To run this project locally on your machine:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/amarsinghpatil/Memory_Game_JS.git
+   git clone https://github.com/amarsinghpatil/Memory_Game.git
    ```
 
 2. Navigate into the project folder:
